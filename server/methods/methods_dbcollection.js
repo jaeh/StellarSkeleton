@@ -30,7 +30,6 @@ function dbCollectionAddClick(args) {
       item = DbCollection.findOne({_id: args._id});
       if(item) {
         clicks = item.clicks + 1;
-        console.log('added a click to item with _id: '+args._id+' new click number = '+clicks);
         itemId = DbCollection.update({_id: args._id},{$inc: {clicks: 1}});
         return itemId;
       }

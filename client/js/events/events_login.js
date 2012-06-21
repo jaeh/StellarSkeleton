@@ -16,12 +16,7 @@ function loginCallback(error, returnVal) {
     console.log("login successful");
     Stellar.session.updateKey(returnVal.auth);
     Session.set('user', returnVal);
-    redirectTo = '/';
-    if(returnVal.redirectTo) {
-      redirectTo = returnVal.redirectTo;
-    }
-    console.log("redirectTo ="+redirectTo);
-    Stellar.redirect(redirectTo);
+    Stellar.redirect('/');
   
   } else {
     return standardHandler(error, returnVal);

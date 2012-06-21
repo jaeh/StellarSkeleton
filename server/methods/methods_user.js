@@ -31,9 +31,7 @@ function insertUser(args) {
 }
 
 
-
 function loginUser(name, password) {
-  console.log('login using '+name+' and '+password);
   user = Users.findOne({username: name});
   if(user) {
     if(user.password == hashPassword(password, user.salt)) {

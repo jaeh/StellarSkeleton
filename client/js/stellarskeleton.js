@@ -41,7 +41,7 @@ StellarSkeleton.load = {};
 //TODO this is a hack as it shouldn't be here, I need to get Madewith allowing me to change the path
 StellarSkeleton.load.madewith = function() {
   madewith = {};
-  madewith.value = 'stellarskeleton';
+  madewith.value = 'stellarskeleton.meteor.com';
   if(madewith && madewith.value != '') {
     var hostname = madewith.value;
     var match = hostname.match(/(.*)\.meteor.com$/);
@@ -74,9 +74,10 @@ StellarSkeleton.load.madewith = function() {
           server.call('vote', hostname);
           // stop these so you don't click through the link to go to the
           // app.
-          event.stopPropagation();
-          event.preventDefault();
         }
+        
+        event.stopPropagation();
+        event.preventDefault();
       }
     };
 

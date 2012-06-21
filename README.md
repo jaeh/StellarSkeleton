@@ -14,13 +14,13 @@ To use the app, you need to install Meteor:
 
 Then you can clone the code onto your system:
 
-    git clone 
+    git clone https://github.com/manarius/StellarSkeleton.git
 
 Add packages StellarSkeleton needs:
 
     //You need to add in Stellar which isn't an official package yet
     //My meteor package dir was here: /usr/lib/meteor/packages/  or  /usr/local/meteor/packages. You should just be able to run the following command there.
-    //If however this offends you, you should be able to copy stellas contents into the lib/ folder and it work fine :)
+    //If however this offends you, you should be able to copy stellars contents into the lib/ folder and it work fine :)
     git clone git://github.com/jonathanKingston/stellar.git
     
     //In the app direcory now:
