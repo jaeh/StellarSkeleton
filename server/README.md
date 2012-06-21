@@ -26,9 +26,6 @@ Add packages StellarSkeleton needs:
     //In the app direcory now:
     meteor add stellar
 
-    //i used stylus for my css (see clients/css/stellarskeleton.styl)
-    meteor add stylus
-
 Move to that directory and deploy to your own location:
 
     cd stellarskeleton
