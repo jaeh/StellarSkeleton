@@ -1,0 +1,48 @@
+<template name="dbcollection_page">
+  {{#with page}}
+    {{#if page}}
+      <div class="page-content" data-slug="{{slug}}">
+        {{#if title}}
+          <header class="page-title">
+            <h2>{{title}}</h2>
+          </header>
+        {{/if}}
+        <div class="page-content">
+        
+          {{#if body}}
+            {{body}}
+          {{/if}}
+        
+          {{#if dbCollection}}
+            <div class="collection">
+              <header>Showing {{dbCollectionCount}} Items:</header>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>Clicks</th>
+                    <th>Add Click</th>
+                  </tr>
+                {{#each dbCollection}}
+                  <tr>
+                    <td>{{name}}</td>
+                    <td>{{slug}}</td>
+                    <td>{{clicks}}</td>
+                    <td><button class="click" data-id="{{_id}}">Click</button></td>
+                  </tr>
+                {{/each}}
+                </tbody>
+                
+              </table>
+            </div>
+          {{/if}}
+        </div>
+        
+        <footer class="page-footer">
+          {{footer}}
+        </div>
+      </div>
+    {{/if}}
+  {{/with}}
+</template>

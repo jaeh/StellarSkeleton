@@ -1,0 +1,54 @@
+<template name="logo">
+  <div id="logo">
+    <a class="brand" href="/" >site_name</a>
+  </div>
+</template>
+
+<template name="nav">
+  <nav>
+    <ul class="inline">
+     {{#each menuItems}}
+        <li class="{{text}}"><a href="{{url}}">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+</template>
+
+<template name="container">  
+  <div class="container">
+    <div class="content">
+      {{#stellar_page}}
+      {{/stellar_page}}
+      <aside class="main">
+        {{>widgets}}
+      </aside>
+      <div class="clearboth"></div>
+    </div>
+  </div>
+</template>
+
+<template name="widgets">
+  {{#unless user}}
+    {{>login}}
+  {{/unless}}
+</template>
+
+<template name="login">
+  <div class="widget">
+    <form id="login-form" action="#" method="post">
+      <ul>
+        <li>
+          <label for="login-username">user:</label>
+          <input id="login-username" type="text" value="" />
+        </li>
+        <li>
+          <label for="login-password">pass:</label>
+          <input id="login-password" type="password" />
+        </li>
+        <li>
+          <input class="widget-login-submit" type="submit" value="login" />
+        </li>
+      </ul>
+    </form>
+  </div>
+</template>

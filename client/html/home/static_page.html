@@ -1,0 +1,23 @@
+<template name="static_page">
+  {{#with page}}
+    {{#if page}}
+      <div class="page-content" data-slug="{{slug}}">
+        {{#if title}}
+          <header class="page-title">
+            <h2>{{title}}</h2>
+          </header>
+        {{/if}}
+        
+        {{#if body}}
+          <div class="page-content">
+            {{body}}
+          </div>
+        {{/if}}
+          
+        <footer class="page-footer">
+          {{footer}}
+        </div>
+      </div>
+    {{/if}}
+  {{/with}}
+</template>
