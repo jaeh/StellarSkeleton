@@ -15,7 +15,9 @@ StellarSkeleton = {};
 StellarSkeleton.settingsLoaded = function() {
   Stellar.log('settings loaded');
   timeLoad = new Date().getTime();
-  StellarSkeleton.load.madewith();
+  
+  //Enable this after you registered your app with madewith.meteor.com, otherwise this will create an error.
+  //StellarSkeleton.load.madewith();
 }
 
 Meteor.subscribe("allsettings", StellarSkeleton.settingsLoaded);
